@@ -50,15 +50,15 @@ const getWithdrawal = () => {
     '👻',
     '💵',  
     '🦖',
+    '👑',
+    '🎄',  
     '👻',
     '💵',  
     '🦖',
-    '👻',
-    '💵',  
-    '🦖',
-    '👻',
-    '💵',  
-    '🦖',
+    '👑',
+    '🎄', 
+    '🧲',
+    '🧲'
   ];
   const doors = document.querySelectorAll('.door');
   
