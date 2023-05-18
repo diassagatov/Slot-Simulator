@@ -134,7 +134,6 @@ const getWithdrawal = () => {
     }
 
     if(doors[0].querySelector('.boxes').querySelector('.box').innerHTML == doors[1].querySelector('.boxes').querySelector('.box').innerHTML && doors[1].querySelector('.boxes').querySelector('.box').innerHTML == doors[2].querySelector('.boxes').querySelector('.box').innerHTML){
-      console.log("helloo");
       userBalance += 100000;
       updateBalance();
     }
@@ -143,19 +142,23 @@ const getWithdrawal = () => {
   
 
   async function spin() {
-    userBalance -= 1000;
-    updateBalance();
-    init();
-    init(false, 0, 1);
-    
-    for (const door of doors){
-      const boxes = door.querySelector('.boxes');
-      const duration = parseInt(boxes.style.transitionDuration);
-      boxes.style.transform = 'translateY(0)';
-      await new Promise((resolve) => setTimeout(resolve, duration * 50));
-      }
+    if(!(userBalance < 1000){
+      userBalance -= 1000;
+      updateBalance();
+      init();
+      init(false, 0, 1);
+
+      for (const door of doors){
+        const boxes = door.querySelector('.boxes');
+        const duration = parseInt(boxes.style.transitionDuration);
+        boxes.style.transform = 'translateY(0)';
+        await new Promise((resolve) => setTimeout(resolve, duration * 50));
+        }
 
     check();
+    }else{
+      alert("No money , no honey bruh");
+    }
   }
 
   function shuffle([...arr]) {
