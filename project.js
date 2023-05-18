@@ -142,7 +142,7 @@ const getWithdrawal = () => {
   
 
   async function spin() {
-    if(!(userBalance < 1000){
+      if(userBalance >= 1000){
       userBalance -= 1000;
       updateBalance();
       init();
@@ -156,9 +156,7 @@ const getWithdrawal = () => {
         }
 
     check();
-    }else{
-      alert("No money , no honey bruh");
-    }
+      }
   }
 
   function shuffle([...arr]) {
