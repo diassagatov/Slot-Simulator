@@ -28,7 +28,7 @@
     <dialog id="withdraw-form">
         <div class="forms">
             <p>Withdraw</p>
-            <input id="drawAmount" type="text" onfocus="this.value=''">
+            <input id="drawAmount" type="number" pattern="[0-9]*" inputmode="numeric" onfocus="this.value=''">
             <div>
                 <button type="button" onclick="getWithdrawal()">Confirm</button>    
                 <button type="button"onclick="closeModal(getElementById('withdraw-form'))">Close</button>
@@ -39,7 +39,7 @@
     <dialog id="deposit-form" >
         <div class="forms">
             <p>Deposit</p>
-            <input id="depAmount" type="text" onfocus="this.value=''">
+            <input id="depAmount" type="number" pattern="[0-9]*" inputmode="numeric" onfocus="this.value=''">
             <div>
                 <button type="button" onclick="getDeposit()">Confirm</button>    
                 <button type="button" onclick="closeModal(getElementById('deposit-form'))">Close</button>
