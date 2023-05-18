@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+button{
+    background-color: #d9fff5;
+    color: black;
+    border-radius: 20px;
+    border: none;
+    padding: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+}
+input{
+    background-color: #ffffff;
+    color: black;
+    border-radius: 20px;
+    border: none;
+    padding: 15px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px; 
+}
+
+
+#header{
+    background-color: #353535;
+    color: #d9fff5;
+    font-family: 'Space Grotesk', sans-serif;
+    display: flex;
+    justify-content: space-between; 
+}
+#header h1{
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+
+#userStatus{
+    display: flex;
+    justify-content: end; 
+    font-size: 20px;
+    padding: 10px;
+}
+#balance-div{
+    display: flex;
+    border: 4px, solid, #d9fff5;
+    margin-right: 20px;
+}
+#balance-div p{
+    text-align: right;
+    align-self: center;
+    padding-right: 5px;
+}
+
+
+
+#withdraw-form, #deposit-form{
+    background-color: #353535;
+    border-radius: 20px;
+    margin: 0 auto;
+    position:relative; 
+    top: 30%;
+}
+#withdraw-form::backdrop, #deposit-form::backdrop{
+    background-color: rgba(0, 0, 0, 0.616);
+}
+.forms{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #d9fff5;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 30px;
+    padding: 10px;
+    border: none;
+    width: 300px;
+}
+.forms *{
+    margin: 5px;
+}
+
+
+
+
+
+
+
+
+
+#app {
+    width: 100%;
+    height: 100%;
+    background: #1a2b45;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .doors {
+    display: flex;
+  }
+  
+  .door {
+    background: #fafafa;
+    width: 100px;
+    height: 110px;
+    overflow: hidden;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  
+  .boxes {
+    transition: transform 1s ease-in-out;
+  }
+  
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+  }
+  
+  .buttons {
+    margin: 1rem 0 2rem 0;
+  }
+  
+  button {
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin: 0 0.2rem;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+  }
+  
+  .info {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+  

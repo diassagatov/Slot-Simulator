@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <title>Slots Simulator</title>
+</head>
+<body>
+
+    <div id="header">
+        <h1>Slot Simulator</h1>
+        <div id="userStatus">
+            <div id="balance-div">
+                <p id="balance">$ 0</p>
+            </div>
+            <div>
+                <button type="button" onclick="openModal(getElementById('deposit-form'))">Deposit</button>    
+                <button type="button" onclick="openModal(getElementById('withdraw-form'))">Withdraw</button>   
+            </div> 
+        </div>
+    </div>
+
+    <dialog id="withdraw-form">
+        <div class="forms">
+            <p>Withdraw</p>
+            <input id="drawAmount" type="text" onfocus="this.value=''">
+            <div>
+                <button type="button" onclick="getWithdrawal()">Confirm</button>    
+                <button type="button"onclick="closeModal(getElementById('withdraw-form'))">Close</button>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="deposit-form" >
+        <div class="forms">
+            <p>Deposit</p>
+            <input id="depAmount" type="text" onfocus="this.value=''">
+            <div>
+                <button type="button" onclick="getDeposit()">Confirm</button>    
+                <button type="button" onclick="closeModal(getElementById('deposit-form'))">Close</button>
+            </div>
+        </div>
+    </dialog>
+
+    <div id="app">
+        <div class="doors">
+          <div class="door">
+            <div class="boxes">
+              <!-- <div class="box">?</div> -->
+            </div>
+          </div>
+      
+          <div class="door">
+            <div class="boxes">
+              <!-- <div class="box">?</div> -->
+            </div>
+          </div>
+      
+          <div class="door">
+            <div class="boxes">
+              <!-- <div class="box">?</div> -->
+            </div>
+          </div>
+        </div>
+      
+        <div class="buttons">
+          <button id="spinner">Play</button>
+        </div>
+      </div>
+
+
+
+    <script src="project.js"></script>
+</body>
+</html>
