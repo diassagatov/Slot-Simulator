@@ -9,9 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
     <title>Slots Simulator</title>
-    <link rel="manifest" href="manifest.json">  </head>
+    <link rel="manifest" href="manifest.json">
+</head>
 <body>
-
     <div id="header">
         <h1>Slot Simulator</h1>
         <div id="userStatus">
@@ -31,7 +31,7 @@
             <input id="drawAmount" type="number" pattern="[0-9]*" inputmode="numeric" onfocus="this.value=''">
             <div>
                 <button type="button" onclick="getWithdrawal()">Confirm</button>    
-                <button type="button"onclick="closeModal(getElementById('withdraw-form'))">Close</button>
+                <button type="button" onclick="closeModal(getElementById('withdraw-form'))">Close</button>
             </div>
         </div>
     </dialog>
@@ -50,28 +50,35 @@
     <div id="app">
         <div class="doors">
           <div class="door">
-            <div class="boxes">
-              </div>
+            <div class="boxes"></div>
           </div>
       
           <div class="door">
-            <div class="boxes">
-              </div>
+            <div class="boxes"></div>
           </div>
       
           <div class="door">
-            <div class="boxes">
-              </div>
+            <div class="boxes"></div>
           </div>
         </div>
       
         <div class="buttons">
           <button id="spinner">Play</button>
-          <button id="install-button">Install</button>  </div>
+          <button id="install-button">Install</button>  
+        </div>
       </div>
 
-
-
     <script src="project.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js').then(function(registration) {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, function(error) {
+            console.log('ServiceWorker registration failed: ', error);
+          });
+        });
+      }
+    </script>
 </body>
 </html>
