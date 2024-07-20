@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
     <title>Slots Simulator</title>
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="/Slot_simulator/manifest.json">
 </head>
 <body>
     <div id="header">
@@ -72,7 +72,7 @@
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
-          navigator.serviceWorker.register('/sw.js').then(function(registration) {
+          navigator.serviceWorker.register('/Slot_simulator/sw.js').then(function(registration) {
             console.log('ServiceWorker registration successful with scope: ', registration.scope);
           }, function(error) {
             console.log('ServiceWorker registration failed: ', error);
